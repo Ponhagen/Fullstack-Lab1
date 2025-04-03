@@ -30,4 +30,20 @@ const dishes = [
         difficulty: 'Easy',
 
     },
+    {
+        name: 'Spaghetti Carbonara',
+        ingredients: ['Spaghetti', 'Bacon', 'Ägg', 'Parmesanost', 'Svartpeppar'],
+        preperationSteps: ['Koka spaghettin', 'Stek bacon', 'Vispa ihop ägg och parmesanost', 'Blanda allt i en skål'],
+        cookingTime: 20,
+        origin: 'Italien',
+        difficulty: 'Medium',
+    },
+    {
+        name: 'Ugnspannkaka',
+        ingredients: ['Mjöl', 'Mjölk', 'Ägg', 'Salt'],
+        preperationSteps: ['Vispa ihop mjöl, mjölk och ägg', 'Häll i en ugnsform', 'Grädda i ugnen på 200 grader i 30 minuter'],
+        cookingTime: 30,
+        origin: 'Sverige',
+        difficulty: 'Easy',
+    },
 ]
