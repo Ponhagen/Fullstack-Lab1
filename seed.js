@@ -12,4 +12,13 @@ const dishes = [
         difficulty: 'Medium',
 
     },
+    {
+        name: 'Köttbullar Med Potatismos',
+        ingredients: ['Mjölig potatis', 'Köttfärs', 'Ägg', 'Lök', 'Peppar', 'Salt', 'Smör' ,'Mjölk'],
+        preperationSteps: ['Blanda färs ägg salt lök och peppar i en skål och blanda','Koka upp vatten', 'Rulla dina köttbullar','', 'Stek dina köttbullar', 'Koka potatisen', 'Mosa potatisen' ,'Lägg i smör och mjölk och blanda runt tills det är en jämn smet'],
+        cookingTime: 60,
+        origin: 'Sverige',
+        difficulty: 'Hard',
+
+    },
 ]
