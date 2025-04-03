@@ -21,4 +21,13 @@ const dishes = [
         difficulty: 'Hard',
 
     },
+    {
+        name: 'Hemmagjord Pizza',
+        ingredients: ['Pizzadeg', 'Tomatsås', 'Ost', 'Skinka', 'Paprika', 'Lök'],
+        preperationSteps: ['Blanda mjöl och vatten i en bunke', 'Kavla ut degen', 'Lägg på tomatsås', 'Lägg på ost och skinka', 'Grädda i ugnen på 220 grader i 10-15 minuter'],
+        cookingTime: 30,
+        origin: 'Italien',
+        difficulty: 'Easy',
+
+    },
 ]
