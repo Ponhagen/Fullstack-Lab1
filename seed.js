@@ -47,3 +47,15 @@ const dishes = [
         difficulty: 'Easy',
     },
 ]
+mongoose.connect(process.env.CONNECTION_URL)
+  .then(async () => {
+    console.log('Ansluten till MongoDB!');
+    await Dish.deleteMeny(); // rensar tidigare rätter
+    await Dish.insertMeny(dishes); // lägger in dina recept
+    console.log("Rätter har lagts till!");
+    mongoose.disconnect();
+  })
+  .catch((err) => {
+    console.error("Fel vid anslutning:", err.message);
+  });
+
