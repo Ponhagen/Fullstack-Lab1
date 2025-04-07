@@ -19,7 +19,17 @@ app.get("/api/dishes", async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
-// Route för att lägga till ny rätt
+
+// Route för att hämta en specifik rätt
+app.post("/api/dishes/", async (req, res) => {
+  try {
+    const newDish = new Dish(req.body);
+    const saveDish = await newDish.save();
+    res.status(201).json(saveDish);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
 
 // Anslut till MongoDB och starta servern
 mongoose.connect(connectionString)
