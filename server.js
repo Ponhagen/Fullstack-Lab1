@@ -30,6 +30,41 @@ app.post("/api/dishes/", async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 });
+// Route för att hämta en specifik rätt
+
+app.put("/api/dishes/:id", async (req, res) => {
+  try {
+    const updatedDish = await Dish.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedDish) {
+      return res.status(404).json({ message: "Rätt hittades inte" });
+    }
+
+    res.json(updatedDish);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+// Route för att ta bort en rätt
+
+app.delete("/api/dishes/:id", async (req, res) => {
+  try {
+    const deletedDish = await Dish.findByIdAndDelete(req.params.id);
+
+    if (!deletedDish) {
+      return res.status(404).json({ message: "Rätt hittades inte" });
+    }
+
+    res.json({ message: "Rätten har tagits bort" });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
 
 // Anslut till MongoDB och starta servern
 mongoose.connect(connectionString)
