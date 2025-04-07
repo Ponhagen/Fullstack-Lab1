@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="se">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mina Rätter</title>
+
+    </head>
+    <body>
+        <h1>Mina Rätter</h1>
+        <ul> id="dish-list"></ul>
+        <script>
+            fetch("/api/dishes")
+                .then(res => res.json())
+        </script>
+    </body></html>>
