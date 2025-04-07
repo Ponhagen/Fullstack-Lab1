@@ -9,6 +9,9 @@ const connectionString = process.env.CONNECTION_URL;
 
 // Middleware för att kunna ta emot JSON
 app.use(express.json());
+// Middleware för att servera statiska filer
+app.use(express.static("public"));
+
 
 // Test-route
 app.get("/api/dishes", async (req, res) => {
