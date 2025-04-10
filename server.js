@@ -4,10 +4,6 @@ require("dotenv").config();
 const Dish = require("./models/dishModel");
 
 const app = express();
-app.listen(5000, () => {
-  console.log("Servern körs på port 5000");
-}
-);
 const port = process.env.PORT || 5000;
 const connectionString = process.env.CONNECTION_URL;
 
