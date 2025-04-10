@@ -15,7 +15,7 @@ app.use(express.static("public"));
 const path = require("path");
 
 
-// Test-route
+// Test väg
 app.get("/api/dishes", async (req, res) => {
   try {
     const dishes = await Dish.find(); // Hämta alla rätter från databasen
@@ -42,7 +42,7 @@ app.put("/api/dishes/:id", async (req, res) => {
     const updatedDish = await Dish.findByIdAndUpdate(
       req.params.id,
       req.body,
-      { new: true, runValidators: true }
+      { new: true, runValidators: true } // gör ändringar
     );
 
     if (!updatedDish) {
