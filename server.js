@@ -14,7 +14,6 @@ app.use(express.static("public"));
 
 const path = require("path");
 
-
 // Test väg
 app.get("/api/dishes", async (req, res) => {
   try {
